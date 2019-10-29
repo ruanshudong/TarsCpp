@@ -417,7 +417,7 @@ bool AdapterProxy::checkActive(bool bForceConnect)
 
                 _trans->close();
 
-                TLOGERROR("[TARS][AdapterProxy::checkActive connect ex:" << ex.what() << endl);
+                TLOGERROR("[TARS][AdapterProxy::checkActive objname:" << _objectProxy->name() << ", desc:" << _endpoint.desc() << ", connect ex:" << ex.what() << endl);
             }
         }
 
@@ -449,7 +449,7 @@ bool AdapterProxy::checkActive(bool bForceConnect)
 
             _trans->close();
 
-            TLOGERROR("[TARS][AdapterProxy::checkActive connect ex:" << ex.what() << endl);
+            TLOGERROR("[TARS][AdapterProxy::checkActive objname:" << _objectProxy->name() << ", desc:" << _endpoint.desc() << ", connect ex:" << ex.what() << endl);
         }
     }
 
