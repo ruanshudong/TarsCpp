@@ -18,7 +18,8 @@ else()
     target_link_libraries(tarsservant)
 endif()
 
-add_dependencies(tarsservant COPY-SERVENT-TARS tarsframework)
+#add_dependencies(tarsservant COPY-SERVENT-TARS tarsframework)
+add_dependencies(tarsservant COPY-SERVENT-TARS)
 
 install(TARGETS tarsservant
         LIBRARY DESTINATION lib

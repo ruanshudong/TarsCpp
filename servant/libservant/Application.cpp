@@ -708,7 +708,8 @@ void Application::main(int argc, char *argv[])
 
         cout << "[main exception]:" << ex.what() << endl;
 
-        terminate();
+        exit(-1);
+        // terminate();
     }
 
     //初始化完毕后, 日志再修改为异步
@@ -810,7 +811,7 @@ void Application::outClient(ostream &os)
     os << outfill("sample-rate")                 << _communicator->getProperty("sample-rate") << endl;
     os << outfill("max-sample-count")            << _communicator->getProperty("max-sample-count") << endl;
     os << outfill("netthread")                  << _communicator->getProperty("netthread") << endl;
-    os << outfill("recvthread")                  << _communicator->getProperty("recvthread") << endl;
+    // os << outfill("recvthread")                  << _communicator->getProperty("recvthread") << endl;
     os << outfill("asyncthread")                 << _communicator->getProperty("asyncthread") << endl;
     os << outfill("modulename")                  << _communicator->getProperty("modulename") << endl;
     os << outfill("enableset")                     << _communicator->getProperty("enableset") << endl;
